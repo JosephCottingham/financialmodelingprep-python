@@ -8,7 +8,7 @@ class technical_indicators():
     def __init__(self, API_KEY):
         self.API = API_KEY
 
-    @get_json_data(API_KEY)
+    @get_json_data
     def stock_price(ticker: str, interval: str, period: str, indicator_type: str):
         '''
         Earnings Calendar
@@ -17,7 +17,7 @@ class technical_indicators():
         '''
         return f'{self.BASE_URL}/api/v3/technical_indicator/{interval}/{ticker}?period={period}&type={indicator_type}?apikey={self.API}'
 
-    @get_json_data(API_KEY)
+    @get_json_data
     def stock_price(ticker: str, interval: str, period: str, indicator_type: str):
         '''
         Earnings Calendar
