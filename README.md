@@ -1,8 +1,10 @@
 # financialmodelingprep-python
 Wrapper for financialmodelingprep API V3
+https://financialmodelingprep.com/developer/docs/
 
 ## Installation
 '''pip install financialmodelingprep'''
+https://pypi.org/project/financialmodelingprep/
 
 ## License
 
