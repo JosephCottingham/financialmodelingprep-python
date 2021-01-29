@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="financialmodelingprep",
-    version="0.0.1",
+    version="0.0.2",
     author="Joseph Cottingham | Joseph Conigliari",
     description="The unofficial python interface for the financialmodelingprep API",
     license='MIT',
