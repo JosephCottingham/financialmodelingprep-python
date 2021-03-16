@@ -44,7 +44,7 @@ class company_valuation():
         Search
         Values for exchange parameter are: ETF | MUTUAL_FUND | COMMODITY | INDEX | CRYPTO | FOREX | TSX | AMEX | NASDAQ | NYSE | EURONEXT
         '''
-        return f'{self.BASE_URL}/api/v3/search?query={query}&limit={str(limit)}&exchange={exchange}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/search?query={query}&limit={str(limit)}&exchange={exchange}&apikey={self.API}'
 
     #Ticker Search
 
@@ -54,7 +54,7 @@ class company_valuation():
         Ticker Search
         Values for exchange parameter are: ETF | MUTUAL_FUND | COMMODITY | INDEX | CRYPTO | FOREX | TSX | AMEX | NASDAQ | NYSE | EURONEXT
         '''
-        return f'{self.BASE_URL}/api/v3/search-ticker?query={query}&limit={str(limit)}&exchange={exchange}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/search-ticker?query={query}&limit={str(limit)}&exchange={exchange}&apikey={self.API}'
 
     #Company Financial Statements
     
@@ -63,42 +63,42 @@ class company_valuation():
         '''
         Annual Income Statement
         '''
-        return f'{self.BASE_URL}/api/v3/income-statement/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/income-statement/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def quarterly_income_statement(self, ticker: str, limit: int):
         '''
         Quarterly Income Statement
         '''
-        return f'{self.BASE_URL}/api/v3/income-statement/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/income-statement/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def annual_balance_sheet_statement(self, ticker: str, limit: int):
         '''
         Annual Balance Sheet statement
         '''
-        return f'{self.BASE_URL}/api/v3/balance-sheet-statement/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/balance-sheet-statement/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def quarterly_balance_sheet_statement(self, ticker: str, limit: int):
         '''
         Quarterly Balance Sheet Statement
         '''
-        return f'{self.BASE_URL}/api/v3/balance-sheet-statement/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/balance-sheet-statement/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def annual_cash_flow_statement(self, ticker: str, limit: int):
         '''
         Annual Cash Flow statement
         '''
-        return f'{self.BASE_URL}/api/v3/cash-flow-statement/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/cash-flow-statement/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def quarterly_cash_flow_statement(self, ticker: str, limit: int):
         '''
         Quarterly Cash Flow Statement
         '''
-        return f'{self.BASE_URL}/api/v3/cash-flow-statement/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/cash-flow-statement/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     #Financial Statements Growth
 
@@ -114,21 +114,21 @@ class company_valuation():
         '''
         Annual Income Statement Growth
         '''
-        return f'{self.BASE_URL}/api/v3/income-statement-growth/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/income-statement-growth/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def annual_balance_sheet_statement_growth(self, ticker: str, limit: int):
         '''
         Annual Balance Sheet Statement Growth
         '''
-        return f'{self.BASE_URL}/api/v3/balance-sheet-statement-growth/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/balance-sheet-statement-growth/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def annual_cash_flow_statement_growth(self, ticker: str, limit: int):
         '''
         Annual Cash Flow Statement Growth
         '''
-        return f'{self.BASE_URL}/api/v3/cash-flow-statement-growth/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/cash-flow-statement-growth/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     # International Filings
 
@@ -139,7 +139,7 @@ class company_valuation():
         Values for international filings are: TO | PA | DE | NS | L | ME | HK | AX | OL | SW
 
         '''
-        return f'{self.BASE_URL}/api/v3/income-state/RY.TO?limit=100{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/income-statement/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     #Company Financial Statements As Reported
 
@@ -148,56 +148,56 @@ class company_valuation():
         '''
         Annual Income Statements
         '''
-        return f'{self.BASE_URL}/api/v3/income-statement-as-reported/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/income-statement-as-reported/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def quarterly_income_statements(self, ticker: str, limit: int):
         '''
         Quarterly Income Statements
         '''
-        return f'{self.BASE_URL}/api/v3/income-statement-as-reported/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/income-statement-as-reported/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def annual_balance_sheet_statements(self, ticker: str, limit: int):
         '''
         Annual Balance Sheet Statements
         '''
-        return f'{self.BASE_URL}/api/v3/balance-sheet-statement-as-reported/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/balance-sheet-statement-as-reported/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def quarterly_balance_sheet_statements(self, ticker: str, limit: int):
         '''
         Quarterly cash flow statements
         '''
-        return f'{self.BASE_URL}/api/v3/balance-sheet-statement-as-reported/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/balance-sheet-statement-as-reported/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def annual_cash_flow_statements(self, ticker: str, limit: int):
         '''
         Annual Cash Flow Statements
         '''
-        return f'{self.BASE_URL}/api/v3/cash-flow-statement-as-reported/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/cash-flow-statement-as-reported/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def quarterly_cash_flow_statements(self, ticker: str, limit: int):
         '''
         Quarterly cash flow statements
         '''
-        return f'{self.BASE_URL}/api/v3/cash-flow-statement-as-reported/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/cash-flow-statement-as-reported/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def annual_full_financial_statement(self, ticker: str, limit: int):
         '''
         Annual Full Financial Statements
         '''
-        return f'{self.BASE_URL}/api/v3/financial-statement-full-as-reported/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/financial-statement-full-as-reported/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
-    def quarterly_full_financial_statements(self, ticker: str, limit: int):
+    def quarterly_full_financial_statement(self, ticker: str, limit: int):
         '''
         Quarterly Full Financial Statements
         '''
-        return f'{self.BASE_URL}/api/v3/financial-statement-full-as-reported/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/financial-statement-full-as-reported/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     #Company Financial Ratios
     @get_json_data
@@ -205,21 +205,21 @@ class company_valuation():
         '''
         Company TTM Ratios
         '''
-        return f'{self.BASE_URL}/api/v3/ratios-ttm/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/ratios-ttm/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def company_financial_ratios(self, ticker: str, limit: int):
         '''
         Company Financial Ratios
         '''
-        return f'{self.BASE_URL}/api/v3/ratios/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/ratios/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def company_quarterly_financial_ratios(self, ticker: str, limit: int):
         '''
         Company Quarterly Financial Ratios
         '''
-        return f'{self.BASE_URL}/api/v3/ratios/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/ratios/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     #Company Enterprise Value
     @get_json_data
@@ -227,7 +227,7 @@ class company_valuation():
         '''
         Company Annual Enterprise Value
         '''
-        return f'{self.BASE_URL}/api/v3/enterprise-values/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/enterprise-values/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     #Company Enterprise Value
     @get_json_data
@@ -235,7 +235,7 @@ class company_valuation():
         '''
         Company Quarterly Enterprise Value
         '''
-        return f'{self.BASE_URL}/api/v3/enterprise-values/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/enterprise-values/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     #Company Key Metrics
     @get_json_data
@@ -243,21 +243,21 @@ class company_valuation():
         '''
         Company TTM Key Metrics
         '''
-        return f'{self.BASE_URL}/api/v3/key-metrics-ttm/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/key-metrics-ttm/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def company_annual_key_metrics(self, ticker: str, limit: int):
         '''
         Company Annual Key Metrics
         '''
-        return f'{self.BASE_URL}/api/v3/key-metrics-ttm/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/key-metrics-ttm/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
-    def company_quarterly_company_key_metrics(self, ticker: str, limit: int):
+    def company_quarterly_key_metrics(self, ticker: str, limit: int):
         '''
         Company Annual Key Metrics
         '''
-        return f'{self.BASE_URL}/api/v3/key-metrics/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/key-metrics/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     #Company Financial Growth
     @get_json_data
@@ -265,29 +265,29 @@ class company_valuation():
         '''
         Company Annual Financial Statement Growth
         '''
-        return f'{self.BASE_URL}/api/v3/financial-growth/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/financial-growth/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def company_quarterly_financial_statement_growth(self, ticker: str, limit: int):
         '''
         Company Quarterly Financial Statement Growth
         '''
-        return f'{self.BASE_URL}/api/v3/financial-growth/{ticker}?period=quarter&limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/financial-growth/{ticker}?period=quarter&limit={str(limit)}&apikey={self.API}'
 
     #Company Rating
     @get_json_data
-    def companies_rating(self, ticker: str):
+    def company_rating(self, ticker: str):
         '''
         Companies Rating
         '''
         return f'{self.BASE_URL}/api/v3/rating/{ticker}?apikey={self.API}'
 
     @get_json_data
-    def historical_companies_rating(self, ticker: str, limit: int):
+    def historical_company_rating(self, ticker: str, limit: int):
         '''
         Historical Companies Rating
         '''
-        return f'{self.BASE_URL}/api/v3/historical-rating/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/historical-rating/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     #Company Discounted Cash Flow Value
     @get_json_data
@@ -295,7 +295,7 @@ class company_valuation():
         '''
         Companies Discounted Cash Flow Value (Intrinsic Value)
         '''
-        return f'{self.BASE_URL}/api/v3/discounted-cash-flow/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/discounted-cash-flow/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     @get_json_data
     def companies_historical_discounted_cash_flow_value(self, ticker: str):
@@ -305,18 +305,18 @@ class company_valuation():
         return f'{self.BASE_URL}/api/v3/historical-discounted-cash-flow/{ticker}?apikey={self.API}'
 
     @get_json_data
-    def companies_historical_discounted_cash_flow_value(self, ticker: str):
+    def companies_quarterly_historical_discounted_cash_flow_value(self, ticker: str):
         '''
         Companies Historical Discounted Cash Flow Value (Intrinsic Value)
         '''
-        return f'{self.BASE_URL}/api/v3/historical-discounted-cash-flow/{ticker}?period=quarter?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/historical-discounted-cash-flow/{ticker}?period=quarter&apikey={self.API}'
 
     @get_json_data
-    def companies_historical_discounted_cash_flow_value(self, ticker: str, limit: int):
+    def companies_daily_historical_discounted_cash_flow_value(self, ticker: str, limit: int):
         '''
         Companies Daily Discounted Cash Flow Value (Intrinsic Value)
         '''
-        return f'{self.BASE_URL}/api/v3/historical-daily-discounted-cash-flow/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/historical-daily-discounted-cash-flow/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     #Market Capitalization
     @get_json_data
@@ -331,7 +331,7 @@ class company_valuation():
         '''
         Historical Market Capitalization
         '''
-        return f'{self.BASE_URL}/api/v3/historical-market-capitalization/{ticker}?limit={str(limit)}?apikey={self.API}'
+        return f'{self.BASE_URL}/api/v3/historical-market-capitalization/{ticker}?limit={str(limit)}&apikey={self.API}'
 
     #Symbols List
     @get_json_data
@@ -382,8 +382,5 @@ class company_valuation():
             query_string += f'dividendMoreThan={dividendMoreThan}&'
         if dividendLowerThan:
             query_string += f'dividendLowerThan={dividendLowerThan}&'
-        return f'{self.BASE_URL}/api/v3/stock-screener{query_string}?apikey={self.API}'
-
-
-
+        return f'{self.BASE_URL}/api/v3/stock-screener{query_string}apikey={self.API}'
         
