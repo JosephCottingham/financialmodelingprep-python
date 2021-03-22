@@ -30,6 +30,12 @@ class calendars():
         '''
         return f'{self.BASE_URL}/api/v3/historical/earning_calendar/{ticker}?limit={str(limit)}&apikey={self.API}'
 
+    @get_json_data
+    def company_historical_earnings_calender(self, datetime_from, datetime_to):
+        '''
+        Earnings Calendar with period
+        '''
+        return f'{self.BASE_URL}/api/v3/ipo_calendar?from={datetime_from.strftime("%Y-%m-%d")}&to={datetime_to.strftime("%Y-%m-%d")}&apikey={self.API}'
 
     @get_json_data
     def ipo_calendar(self, datetime_from, datetime_to):
@@ -58,5 +64,3 @@ class calendars():
         Earnings Calendar with period
         '''
         return f'{self.BASE_URL}/api/v3/economic_calendar?from={datetime_from.strftime("%Y-%m-%d")}&to={datetime_to.strftime("%Y-%m-%d")}&apikey={self.API}'
-
-   
